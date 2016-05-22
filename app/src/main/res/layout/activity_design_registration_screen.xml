@@ -1,0 +1,202 @@
+<!-- copyrighted content owned by Android Arena (www.androidarena.co.in)-->
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#faa519"
+            android:orientation="vertical"
+    >
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#e8e8e7"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true">
+
+
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Sign up"
+                      android:textColor="#2582C5"
+                      android:layout_marginLeft="25dp"
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+
+                      android:layout_gravity="center_horizontal|center_vertical"/>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="354dp"
+                      android:layout_height="match_parent"
+                      android:layout_marginLeft="16dp"
+                      android:layout_marginTop="16dp"
+                      android:layout_marginRight="16dp"
+                      android:layout_marginBottom="30dp"
+                      android:orientation="vertical"
+                      android:background="@color/colorGrey"
+        >
+
+            <ImageView android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:background="@drawable/rangoliicon"
+                       android:layout_marginTop="15dp"
+                       android:layout_gravity="center_horizontal"/>
+
+            <EditText android:id="@+id/username"
+                      android:layout_width="fill_parent"
+
+                      android:layout_height="40dp"
+                      android:hint="username    [enter a-z0-9 - min 5 letters]"
+                      android:background="#f3f3f3"
+                      android:paddingLeft="5dp"
+                      android:layout_marginTop="30dp"/>
+            <EditText android:layout_width="fill_parent"
+                      android:id="@+id/email"
+                      android:layout_height="40dp"
+                      android:hint="email"
+                      android:background="#f3f3f3"
+                      android:paddingLeft="5dp"
+                      android:layout_marginTop="15dp"/>
+            <EditText  android:id="@+id/password"
+                       android:layout_width="fill_parent"
+
+                      android:layout_height="40dp"
+                      android:hint="password"
+                       android:password="true"
+                       android:background="#f3f3f3"
+                      android:paddingLeft="5dp"
+                      android:layout_marginTop="15dp"/>
+            <EditText android:layout_width="fill_parent"
+                      android:id="@+id/passwordagain"
+                      android:layout_height="40dp"
+                      android:hint="password again"
+                      android:background="#f3f3f3"
+                      android:password="true"
+                      android:paddingLeft="5dp"
+                      android:layout_marginTop="15dp"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:text="Age "
+                      android:textColor="#2582C5"
+                      android:layout_marginLeft="1dp"
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+            />
+            <RadioGroup
+                    android:id="@+id/rgAge"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Child "
+                        android:id="@+id/radioButtonChild"/>
+
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Youth  "
+                        android:id="@+id/radioButtonYouth"/>
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adult  "
+                        android:id="@+id/radioButtonAdult"/>
+
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Elder  "
+                        android:id="@+id/radioButtonElder"/>
+
+
+            </RadioGroup>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Resident Status"
+                      android:textColor="#2582C5"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginLeft="1dp"
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+
+            />
+            <RadioGroup
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/rgResidentStatus"
+                    android:layout_height="wrap_content">
+
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I am  a Resident"
+                        android:id="@+id/radioButton"/>
+
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I am a Visitor"
+                        android:id="@+id/radioButton2"/>
+
+
+            </RadioGroup>
+
+            <EditText
+                    android:id="@+id/specialmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/specialmessage"
+                    android:inputType="textCapWords"
+                    android:background="#f3f3f3"
+                    android:maxLines="1"
+                    android:visibility="visible"
+                    android:singleLine="true" />
+
+
+            <Button  android:id="@+id/register_button"
+                     android:layout_width="190dp"
+                     android:layout_height="38dp"
+                     android:layout_gravity="center_horizontal"
+                     android:layout_marginTop="16dp"
+                     android:text="Register"
+                     android:textColor="#fff"
+                     android:textSize="13dp"
+                     android:background="#2683c2"
+                      />
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+
+        >
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

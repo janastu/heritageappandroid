@@ -1,0 +1,1397 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "These guys are a Muthialpet institution, serving fresh, hot tapioca chips. In an age of manufactured, packaged snacks, street vendors are  part of our heritage.",
+        "title": "Tapioca Chips Stand",
+        "category": "Urban Life",
+        "uploadTime": "13-04-2016 12:19:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/fruitjuice.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.817883968,
+          11.931978291
+        ]
+      },
+      "id": "1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "The four-day Pongal Festival, celebrating the harvest. This offering was on the thinnai of an old Tamil house.",
+        "title": "Pongal Offering",
+        "category": "Tamil Culture",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Pongal Offering.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.835857,
+          11.940629
+        ]
+      },
+      "id": "3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "Food sellers and other merchants still walk the streets of Pondicherry, calling out to announce their goods.",
+        "title": "Fish Monger",
+        "category": "Urban Life",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Fish Monger.Muslim Quarter.Pondicherry.151221.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.829739,
+          11.927077
+        ]
+      },
+      "id": "4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "The dense shot of “filter coffee” and sugary boiled milk are mixed cup-to-cup at full arms’ length so called Metre-Long Coffee.",
+        "title": "Metre-Long Coffee",
+        "category": "Urban Life",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Coffee.080322.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.815357,
+          11.921068
+        ]
+      },
+      "id": "5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "The French brought a tradition of excellent, European-style bread baking to Pondicherry.",
+        "title": "French Breads",
+        "category": "French Influence",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Pondy.Baker Street.Bread.101217.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.828508,
+          11.929363
+        ]
+      },
+      "id": "6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "This beautiful mosque complex dates from the mid-17th century and anchors the Muslim Qarter.",
+        "title": "Meera Pali",
+        "category": "Built-Heritage",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Mosque.Muslim Quarter.2015-12-21.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.829997,
+          11.927703
+        ]
+      },
+      "id": "7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "Fishermen do daily mending of their nets in this common space in Pillaichavady. Traditional fishing communities have been decimated by the erosion of Pondicherry's beaches, caused by construction of the harbour breakwater at Ariyankuppam",
+        "title": "Mending Fish Nets",
+        "category": "Intangible Cultural Heritage",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Mending Nets 3.101224.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.856497,
+          12.004318
+        ]
+      },
+      "id": "8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "Houses made of keeth, palm thatch, are rapidly disappearing. Village women soak and braid palm fronds into battens of keeth, which is assembled over bamboo framing.  Keeth is water-tight and breathable.",
+        "title": "Keeth Houses",
+        "category": "Built-Heritage",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Dwelling 2.Pillaichavady.101224.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.856229,
+          12.004486
+        ]
+      },
+      "id": "9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "Lunch doesn't get more traditional than \"meals\" at Hotel Sri Murugan.",
+        "title": "Sapad",
+        "category": "Tamil Culture",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Sapad.Murugan Cafe.151209.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.828353,
+          11.937044
+        ]
+      },
+      "id": "10"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "Delivery by bicycle is still the perfect method of moving goods through the narrow streets of Pondicherry.",
+        "title": "Delivering Gas Cylinders",
+        "category": "Urban Life",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Deliving Gas.Muslim Quarter.Pondicherry.151221.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.829844,
+          11.927219
+        ]
+      },
+      "id": "11"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "marker-color": "#ff8888",
+        "description": "Rue François Martin is the traditional route for Kuruchikuppam funeral processions.",
+        "title": "Funeral Procession",
+        "category": "Intangible Cultural Heritage",
+        "uploadTime": "13-04-2016 06:49:00",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.pantoto.org/yml%20map%20media/Funeral Procession.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.835721,
+          11.940873
+        ]
+      },
+      "id": "12"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "After the Peace of Zsitvatorok and the crushing loss in the 1603-1618 war with Persia, Sultan Ahmet I, decided to build a large mosque in Istanbul to reassert Ottoman power.",
+        "title": "Istanbul Blue Mosque",
+        "category": "Built-Heritage",
+        "uploadTime": "24-04-2016 21:26:39",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://imgc.allpostersimages.com/images/P-473-488-90/21/2164/DFZCD00Z/posters/simon-harris-the-blue-mosque-unesco-world-heritage-site-istanbul-turkey.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.976804,
+          41.005815
+        ]
+      },
+      "id": "26"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "  also iskele - commuter boat dock",
+        "title": "bebek mosque",
+        "category": "Built-Heritage",
+        "uploadTime": "24-04-2016 21:59:45",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "IstanbulHeritageGroup",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/20160421_094653.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.042489,
+          41.0768066
+        ]
+      },
+      "id": "27"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "This three-hour small group walking tour of Istanbul focuses on three of the city's most important 16th century mosques. Designed by the Ottoman architect, Sinan.",
+        "title": "Ottoman Architecture Walking Tour",
+        "category": "Built-Heritage",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "https://a.travel-assets.com/mediavault.le/media/9eaca9319a4a63c9dbe5ae47c02d83241c8b72f7.jpeg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.00373,
+          40.98311
+        ]
+      },
+      "id": "28"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "On this Princes' Island Cruise & Buyukada small group walking tour, you will see mansions, palaces, churches, convents and much more.",
+        "title": "Princes' Island Cruise & Buyukada Walking Tour from Istanbul",
+        "category": "Intangible Cultural Heritage",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://www.istanbul.com/Files/Content/b%C3%BCy%C3%BCkada-atarabas%C4%B1.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.12222,
+          40.85751
+        ]
+      },
+      "id": "29"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "cinema",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#FFECB3",
+        "description": "A place where you can find practically anything you are after, The Grand Bazaar from souvenirs, nargiles, crockery, clothes, jeweler, etc. and it is the most fantastic shopping experience in the world.",
+        "title": "Grand Bazaar Shopping Tour",
+        "category": "Urban Life",
+        "uploadTime": "26-04-2016 12:15:49",
+        "marker-size": "small",
+        "mediatype": "VIDEO",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritagevideos/ShoppingGrand Bazaar.mp4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.96802,
+          41.01086
+        ]
+      },
+      "id": "30"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "This small group tour takes you about five hours away where you'll arrive to Eceabat where you'll have lunch. Following lunch you'll drive to the entrance of the Gelibolu National Park.",
+        "title": "Gallipoli",
+        "category": "Natural Heritage",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://cache-graphicslib.viator.com/graphicslib/thumbs360x240/3795/SITours/3-day-tour-from-istanbul-to-kusadasi-troy-gallipoli-and-ephesus-in-istanbul-151434.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.97369,
+          41.00801
+        ]
+      },
+      "id": "31"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "The Maiden's Tower, also known as Leander's Tower since the medieval Byzantine period, is a tower lying on a small islet.",
+        "title": "Maiden's Tower",
+        "category": "Intangible Cultural Heritage",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://www.taksimbomontivipapartments.com/wp-content/uploads/2015/07/maiden-tower.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.00407,
+          41.02109
+        ]
+      },
+      "id": "32"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "Gülhane Park is a historical urban park in the Eminönü district of Istanbul, Turkey.",
+        "title": "Gülhane Park",
+        "category": "Built-Heritage",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://www.galata-istanbul.com/Content/images/istanbul/gulhane-park-big.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.98141,
+          41.01371
+        ]
+      },
+      "id": "33"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "The TurkuaZoo is the first public aquarium",
+        "title": "TurkuaZoo",
+        "category": "Built-Heritage",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://www.antikhotel.com/d/antikistanbul/media/Art/__thumbs_1024_768_crop/staquarium.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8961,
+          41.04556
+        ]
+      },
+      "id": "34"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  stanDS inside a site ",
+        "title": "arali Mara at KR road",
+        "category": "Natural Heritage",
+        "uploadTime": "25-04-2016 19:00:16",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160425_175029.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5735839,
+          12.9335201
+        ]
+      },
+      "id": "35"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  very healthy and has big fresh leaves\nseem to be 10 yr old",
+        "title": "arali auto stand",
+        "category": "Natural Heritage",
+        "uploadTime": "25-04-2016 19:01:59",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160425_175257.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5735839,
+          12.9338732
+        ]
+      },
+      "id": "36"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  big tree has been here since I came to Bangalore ie since 1994\nvery spiritual aura due to the tree\n",
+        "title": "Satya vigneswara arali katte",
+        "category": "Natural Heritage",
+        "uploadTime": "25-04-2016 19:02:32",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160425_175607.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5735839,
+          12.9338732
+        ]
+      },
+      "id": "37"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  these trees should be 200 years old\nnr colony is cool bcoz of these trees\nnatural ambience in the city",
+        "title": "rama mandira peepul and banyan tree",
+        "category": "Natural Heritage",
+        "uploadTime": "25-04-2016 19:03:11",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160425_181736.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5674943,
+          12.9367578
+        ]
+      },
+      "id": "38"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  parijata tree inside a home\n45 years\nramarao planted this tree",
+        "title": "parijata tree",
+        "category": "Natural Heritage",
+        "uploadTime": "25-04-2016 19:03:42",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160425_184540.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5692854,
+          12.93755
+        ]
+      },
+      "id": "39"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  tungavati born brought up in nr colony\nKR market is the source\n",
+        "title": "flower culture near temple",
+        "category": "Natural Heritage",
+        "uploadTime": "25-04-2016 19:08:58",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160425_182432.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5692854,
+          12.93755
+        ]
+      },
+      "id": "40"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  arali Mara very thuge and bark width is 1.5m ",
+        "title": "arali Mara near krishnaraopark",
+        "category": "Natural Heritage",
+        "uploadTime": "26-04-2016 11:00:30",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160426_105258.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57543515,
+          12.93968599
+        ]
+      },
+      "id": "41"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "IstanbulHeritageMap",
+        "marker-color": "#ff8888",
+        "description": "The Golden Horn, also known by its modern Turkish name as Haliç, is a major urban waterway and the primary inlet of the Bosphorus",
+        "title": "Golden Horn",
+        "category": "Natural Heritage",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://stunningplaces.net/wp-content/uploads/2014/08/10-Golden-Horn-estuary-Istanbul.-Photo-by-extremesailingseries.com_.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.97678,
+          41.01293
+        ]
+      },
+      "id": "42"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "cinema",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#FFECB3",
+        "description": "  huh7B",
+        "title": "niran",
+        "category": "Urban Life",
+        "uploadTime": "26-04-2016 13:42:36",
+        "marker-size": "small",
+        "mediatype": "VIDEO",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritagevideos/VID_20160426_115330.mp4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5737185,
+          12.9325087
+        ]
+      },
+      "id": "43"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "cinema",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#FFECB3",
+        "description": "  muralitesting",
+        "title": "muralitestng",
+        "category": "Village Life",
+        "uploadTime": "26-04-2016 13:57:24",
+        "marker-size": "small",
+        "mediatype": "VIDEO",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritagevideos/VID_20160423_130640.mp4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.573717,
+          12.9325099
+        ]
+      },
+      "id": "44"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  manteswamy from kollegal\n25years of bamboo\nkula kasabu\n",
+        "title": "street bambio",
+        "category": "Village Life",
+        "uploadTime": "26-04-2016 18:59:57",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160426_173442.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5735839,
+          12.9335201
+        ]
+      },
+      "id": "45"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  tree is young\nfamily susbsists by selling milk",
+        "title": "cow with arali katte",
+        "category": "Village Life",
+        "uploadTime": "26-04-2016 19:00:23",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160426_175228.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5735839,
+          12.9303428
+        ]
+      },
+      "id": "46"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  sankasta hara tree\nhas two peepul trees",
+        "title": "vinayaka temple peepul tree",
+        "category": "Village Life",
+        "uploadTime": "26-04-2016 19:00:50",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160426_180613.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5760912,
+          12.9237558
+        ]
+      },
+      "id": "47"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  tree serves as a space for street food",
+        "title": "jayanagar peepel vinayaka Seva samithi",
+        "category": "Village Life",
+        "uploadTime": "26-04-2016 19:01:45",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160426_180914.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5760912,
+          12.9237558
+        ]
+      },
+      "id": "48"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  old has been my friend since I came to study at mes school",
+        "title": "telephone exchange peepul tree",
+        "category": "Urban Life",
+        "uploadTime": "26-04-2016 19:02:03",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160426_182339.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5760912,
+          12.9237558
+        ]
+      },
+      "id": "49"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  small tree hosts flower sellers and milk sellers",
+        "title": "peepul tree at 38thcross",
+        "category": "Spiritual Practice",
+        "uploadTime": "26-04-2016 19:02:05",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160426_181953.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5760912,
+          12.9237558
+        ]
+      },
+      "id": "50"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  tefgrgzb bv",
+        "title": "teststdhx",
+        "category": "Built-Heritage",
+        "uploadTime": "27-04-2016 14:24:57",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/IMG_20160419_180052.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57389968,
+          12.957167584
+        ]
+      },
+      "id": "51"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "PondyMap",
+        "marker-color": "#ff8888",
+        "description": "  ssssssssss",
+        "title": "aaaaaaa",
+        "category": "Natural Heritage",
+        "uploadTime": "29-04-2016 13:11:25",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach Group",
+        "user": "anonymousUser",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages//20131223_2144.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.11,
+          11.11
+        ]
+      },
+      "id": "52"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  metro cut",
+        "title": "metro cur",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 15:35:48",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462093830048.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.56335241,
+          12.88950231
+        ]
+      },
+      "id": "53"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  shaneswara temple",
+        "title": "shaneswara tempke",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 15:57:58",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462092402224.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.51605312,
+          12.8369658
+        ]
+      },
+      "id": "54"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  bike point",
+        "title": "kanakapura highway",
+        "category": "Village Life",
+        "uploadTime": "01-05-2016 15:58:16",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462093264947.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.537496,
+          12.87036697
+        ]
+      },
+      "id": "55"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  peepul and banyan tree ",
+        "title": "peepul an banyan tree together",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:00:35",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462091707006.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.50425688,
+          12.81126691
+        ]
+      },
+      "id": "56"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  fallen katte",
+        "title": "fallen katte",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:03:01",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462090733893.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.48733179,
+          12.72911758
+        ]
+      },
+      "id": "57"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  Siva statue",
+        "title": "siva statue",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:05:08",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462088683958.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.47430598,
+          12.67792736
+        ]
+      },
+      "id": "58"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  kote veeranjaneya temple tree",
+        "title": "kote veeranjaneya temple tree",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:05:13",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462089745873.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.47154107,
+          12.68328217
+        ]
+      },
+      "id": "59"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  abandoned nagara katte",
+        "title": "abandon Ned nagara katte",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:05:51",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462090642267.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.48731753,
+          12.72912181
+        ]
+      },
+      "id": "60"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  development of temple",
+        "title": "modernisation of temple",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:07:10",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462088600149.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.47430951,
+          12.67796177
+        ]
+      },
+      "id": "61"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  alada mara",
+        "title": "alada mara",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:07:47",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462090014072.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.47666196,
+          12.69400736
+        ]
+      },
+      "id": "62"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  lake side tree",
+        "title": "lake side tree",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:07:48",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462090237820.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.482181,
+          12.70749706
+        ]
+      },
+      "id": "63"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  30 years",
+        "title": "shani mahatma",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:10:24",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462088014119.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.47955205,
+          12.67733184
+        ]
+      },
+      "id": "64"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  tree cutting",
+        "title": "tree cutting",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:11:46",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462087661557.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.50404904,
+          12.67240118
+        ]
+      },
+      "id": "65"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  near harohalli",
+        "title": "near harohalli",
+        "category": "Spiritual Practice",
+        "uploadTime": "01-05-2016 16:12:07",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462087335188.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.51335761,
+          12.67022355
+        ]
+      },
+      "id": "66"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  near madiwala",
+        "title": "near madiwala",
+        "category": "Intangible Cultural Heritage",
+        "uploadTime": "01-05-2016 16:16:21",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462073548074.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6162012,
+          12.9150874
+        ]
+      },
+      "id": "67"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  vegetable seller Vijaya selling vegetables for 30 yrs tree is 10 years old \nmadiwala lake neighborhood",
+        "title": "vegetable selling under peepul",
+        "category": "Urban Life",
+        "uploadTime": "01-05-2016 16:16:31",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Default",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462073157179.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6162012,
+          12.9150874
+        ]
+      },
+      "id": "68"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  peepul tree on the compound",
+        "title": "peepul on the compound",
+        "category": "Natural Heritage",
+        "uploadTime": "01-05-2016 16:17:06",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462073775166.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6233622,
+          12.9186073
+        ]
+      },
+      "id": "69"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "camera",
+        "appname": "BangaloreTreeMap",
+        "marker-color": "#ff8888",
+        "description": "  small temple of Shiva under the tree",
+        "title": "Shiva under the tree",
+        "category": "Natural Heritage",
+        "uploadTime": "01-05-2016 16:17:09",
+        "marker-size": "small",
+        "mediatype": "IMAGE",
+        "groupname": "Intach",
+        "user": "admin",
+        "url": "http://pondy.openrun.com:8080//heritagedocs/list/heritageimages/image1462074003787.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.6136948,
+          12.9022591
+        ]
+      },
+      "id": "70"
+    }
+  ]
+}

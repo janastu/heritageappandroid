@@ -1,0 +1,634 @@
+[
+   {
+      "id":1,
+      "name":"PondyMap",
+      "contact":"mbjesq@gmail.com",
+      "regions":[
+         {
+            "id":1,
+            "name":"PondyTown",
+            "centerLatitude":11.931348469006116,
+            "centerLongitude":79.83003973960876,
+            "topLatitude":11.936177069223557,
+            "topLongitude":79.83626246452332,
+            "bottomLatitude":11.925050165589031,
+            "bottomLongitude":79.8226797580719
+         },
+         {
+            "id":2,
+            "name":"Auroville",
+            "centerLatitude":12.007294466284536,
+            "centerLongitude":79.81080293655396,
+            "topLatitude":12.018334034444141,
+            "topLongitude":79.82887029647827,
+            "bottomLatitude":12.000767056287035,
+            "bottomLongitude":79.80214476585388
+         },
+         {
+            "id":3,
+            "name":"Bahour",
+            "centerLatitude":11.796869033128406,
+            "centerLongitude":79.74868297576904,
+            "topLatitude":11.81980493878816,
+            "topLongitude":79.78799343109131,
+            "bottomLatitude":11.7746034076277,
+            "bottomLongitude":79.70508098602295
+         }
+      ],
+      "groups":[
+         {
+            "id":1,
+            "name":"Intach Group",
+            "icon":null,
+            "iconContentType":"image/png",
+            "details":"Intach"
+         },
+         {
+            "id":2,
+            "name":"Default",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Default"
+         },
+         {
+            "id":3,
+            "name":"Intach",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Intach"
+         }
+      ],
+      "languages":[
+         {
+            "id":1,
+            "heritageLanguage":"English"
+         },
+         {
+            "id":2,
+            "heritageLanguage":"Tamil"
+         },
+         {
+            "id":3,
+            "heritageLanguage":"French"
+         }
+      ],
+      "categorys":[
+         {
+            "id":1,
+            "categoryName":"Built-Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"architecture, public space, parks, public art, street scenes, neighborhoods"
+         },
+         {
+            "id":2,
+            "categoryName":"Urban Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"Urban Life"
+         },
+         {
+            "id":3,
+            "categoryName":"Natural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"forests, rivers, water bodies, wetlands, mangroves, beaches, ocean, undeveloped places, wildlife..."
+         },
+         {
+            "id":4,
+            "categoryName":"Intangible Cultural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"art & culture, history, folklore, cuisine, fashion, design, traditions, economy, education, ways-of-life, sports & games..."
+         },
+         {
+            "id":5,
+            "categoryName":"Spiritual Practice",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"religious practice, ritual, internal cultivation.."
+         },
+         {
+            "id":6,
+            "categoryName":"Lived Experience",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"stories, interviews, profiles, biographies, memories, portraits..."
+         },
+         {
+            "id":7,
+            "categoryName":"Village Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":8,
+            "categoryName":"Tamil Culture",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":9,
+            "categoryName":"French Influence",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":10,
+            "categoryName":"Other Indian Influence",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":11,
+            "categoryName":"Other Foreign Influence",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         }
+      ]
+   },
+   {
+      "id":2,
+      "name":"IstanbulHeritageMap",
+      "contact":"dinesh@servelots.com",
+      "regions":[
+         {
+            "id":4,
+            "name":"Bosphorus university area",
+            "centerLatitude":41.08090391180388,
+            "centerLongitude":29.052658081054688,
+            "topLatitude":41.0922897146709,
+            "topLongitude":29.0725708007812,
+            "bottomLatitude":41.07158678754193,
+            "bottomLongitude":29.037551879882812
+         },
+         {
+            "id":5,
+            "name":"touristy istanbul",
+            "centerLatitude":41.02031900050546,
+            "centerLongitude":28.966827392578125,
+            "topLatitude":41.03896645352545,
+            "topLongitude":28.997039794921875,
+            "bottomLatitude":41.001666266518185,
+            "bottomLongitude":28.938674926757812
+         },
+         {
+            "id":8,
+            "name":"Tale Of Two Continents",
+            "centerLatitude":41.2623238021485,
+            "centerLongitude":29.02244567871093,
+            "topLatitude":41.091772220976644,
+            "topLongitude":29.271697998046875,
+            "bottomLatitude":40.94204577003516,
+            "bottomLongitude":28.788299560546875
+         }
+      ],
+      "groups":[
+         {
+            "id":2,
+            "name":"Default",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Default"
+         },
+         {
+            "id":4,
+            "name":"IstanbulHeritageGroup",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Istanbul"
+         }
+      ],
+      "languages":[
+         {
+            "id":1,
+            "heritageLanguage":"English"
+         },
+         {
+            "id":3,
+            "heritageLanguage":"French"
+         },
+         {
+            "id":4,
+            "heritageLanguage":"Turkish"
+         },
+         {
+            "id":5,
+            "heritageLanguage":"Arabic"
+         },
+         {
+            "id":6,
+            "heritageLanguage":"Kurmanji"
+         },
+         {
+            "id":7,
+            "heritageLanguage":"Zazaki"
+         },
+         {
+            "id":8,
+            "heritageLanguage":"Laz"
+         }
+      ],
+      "categorys":[
+         {
+            "id":1,
+            "categoryName":"Built-Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"architecture, public space, parks, public art, street scenes, neighborhoods"
+         },
+         {
+            "id":2,
+            "categoryName":"Urban Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"Urban Life"
+         },
+         {
+            "id":3,
+            "categoryName":"Natural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"forests, rivers, water bodies, wetlands, mangroves, beaches, ocean, undeveloped places, wildlife..."
+         },
+         {
+            "id":4,
+            "categoryName":"Intangible Cultural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"art & culture, history, folklore, cuisine, fashion, design, traditions, economy, education, ways-of-life, sports & games..."
+         },
+         {
+            "id":5,
+            "categoryName":"Spiritual Practice",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"religious practice, ritual, internal cultivation.."
+         },
+         {
+            "id":6,
+            "categoryName":"Lived Experience",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"stories, interviews, profiles, biographies, memories, portraits..."
+         },
+         {
+            "id":7,
+            "categoryName":"Village Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         }
+      ]
+   },
+   {
+      "id":3,
+      "name":"BangaloreTreeMap",
+      "contact":"murali@nammacycle.in",
+      "regions":[
+         {
+            "id":6,
+            "name":"Basavanagudi",
+            "centerLatitude":12.946156711682963,
+            "centerLongitude":77.57377624511719,
+            "topLatitude":12.953245860276573,
+            "topLongitude":77.580406665802,
+            "bottomLatitude":12.939841135139062,
+            "bottomLongitude":77.56688833236694
+         },
+         {
+            "id":7,
+            "name":"Yediyur",
+            "centerLatitude":12.932939825568477,
+            "centerLongitude":77.57330417633057,
+            "topLatitude":12.939025535776251,
+            "topLongitude":77.57944107055664,
+            "bottomLatitude":12.926833053061582,
+            "bottomLongitude":77.56757497787476
+         }
+      ],
+      "groups":[
+         {
+            "id":1,
+            "name":"Intach Group",
+            "icon":null,
+            "iconContentType":"image/png",
+            "details":"Intach"
+         },
+         {
+            "id":2,
+            "name":"Default",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Default"
+         },
+         {
+            "id":3,
+            "name":"Intach",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Intach"
+         }
+      ],
+      "languages":[
+         {
+            "id":1,
+            "heritageLanguage":"English"
+         }
+      ],
+      "categorys":[
+         {
+            "id":1,
+            "categoryName":"Built-Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"architecture, public space, parks, public art, street scenes, neighborhoods"
+         },
+         {
+            "id":2,
+            "categoryName":"Urban Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"Urban Life"
+         },
+         {
+            "id":3,
+            "categoryName":"Natural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"forests, rivers, water bodies, wetlands, mangroves, beaches, ocean, undeveloped places, wildlife..."
+         },
+         {
+            "id":4,
+            "categoryName":"Intangible Cultural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"art & culture, history, folklore, cuisine, fashion, design, traditions, economy, education, ways-of-life, sports & games..."
+         },
+         {
+            "id":5,
+            "categoryName":"Spiritual Practice",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"religious practice, ritual, internal cultivation.."
+         },
+         {
+            "id":6,
+            "categoryName":"Lived Experience",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"stories, interviews, profiles, biographies, memories, portraits..."
+         },
+         {
+            "id":7,
+            "categoryName":"Village Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         }
+      ]
+   },
+   {
+      "id":4,
+      "name":"KaveriHeritageMap",
+      "contact":"murali@nammacycle.in",
+      "regions":[
+         {
+            "id":16,
+            "name":"KaveriMusicRegion",
+            "centerLatitude":10.939464,
+            "centerLongitude":79.006119,
+            "topLatitude":11.203619,
+            "topLongitude":79.442825,
+            "bottomLatitude":78.485641,
+            "bottomLongitude":10.668326
+         },
+         {
+            "id":17,
+            "name":"TanjoreRegion",
+            "centerLatitude":10.77723,
+            "centerLongitude":79.141903,
+            "topLatitude":10.841304,
+            "topLongitude":79.223614,
+            "bottomLatitude":10.77723,
+            "bottomLongitude":79.141903
+         },
+         {
+            "id":18,
+            "name":"KumbakonamRegion",
+            "centerLatitude":10.94885,
+            "centerLongitude":79.377079,
+            "topLatitude":10.985299,
+            "topLongitude":79.406347,
+            "bottomLatitude":10.899343,
+            "bottomLongitude":79.334936
+         },
+         {
+            "id":19,
+            "name":"PoompuharRegion",
+            "centerLatitude":11.155119,
+            "centerLongitude":79.710617,
+            "topLatitude":11.463496,
+            "topLongitude":79.927597,
+            "bottomLatitude":10.983956,
+            "bottomLongitude":79.580154
+         },
+         {
+            "id":9,
+            "name":"CoorgRegion",
+            "centerLatitude":12.475464560067579,
+            "centerLongitude":75.87913513183594,
+            "topLatitude":12.596114270299982,
+            "topLongitude":75.86111068725586,
+            "bottomLatitude":12.19104612920328,
+            "bottomLongitude":75.66215515136719
+         },
+         {
+            "id":10,
+            "name":"SriRangapatnaRegion",
+            "centerLatitude":12.407993482534668,
+            "centerLongitude":76.70323848724365,
+            "topLatitude":12.42366845049574,
+            "topLongitude":76.7224645614624,
+            "bottomLatitude":12.38896431249162,
+            "bottomLongitude":76.6916513442993
+         },
+         {
+            "id":11,
+            "name":"MysoreRegion",
+            "centerLatitude":12.475464560067579,
+            "centerLongitude":75.87913513183594,
+            "topLatitude":12.596114270299982,
+            "topLongitude":75.86111068725586,
+            "bottomLatitude":12.19104612920328,
+            "bottomLongitude":75.66215515136719
+         },
+         {
+            "id":12,
+            "name":"TalakadRegion",
+            "centerLatitude":12.131212,
+            "centerLongitude":76.895199,
+            "topLatitude":12.267789,
+            "topLongitude":77.143764,
+            "bottomLatitude":12.131212,
+            "bottomLongitude":76.895199
+         },
+         {
+            "id":13,
+            "name":"KollegalRegion",
+            "centerLatitude":12.28212,
+            "centerLongitude":77.175865,
+            "topLatitude":12.396823,
+            "topLongitude":77.427864,
+            "bottomLatitude":12.151927,
+            "bottomLongitude":77.106514
+         },
+         {
+            "id":14,
+            "name":"MetturRegion",
+            "centerLatitude":11.498108,
+            "centerLongitude":77.710419,
+            "topLatitude":11.971402,
+            "topLongitude":77.941132,
+            "bottomLatitude":11.204588,
+            "bottomLongitude":77.567596
+         },
+         {
+            "id":15,
+            "name":"TrichyRegion",
+            "centerLatitude":10.823432,
+            "centerLongitude":78.69112,
+            "topLatitude":10.888508,
+            "topLongitude":78.760128,
+            "bottomLatitude":10.763402,
+            "bottomLongitude":78.637562
+         }
+      ],
+      "groups":[
+         {
+            "id":2,
+            "name":"Default",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Default"
+         },
+         {
+            "id":3,
+            "name":"Intach",
+            "icon":null,
+            "iconContentType":"image/jpeg",
+            "details":"Intach"
+         }
+      ],
+      "languages":[
+         {
+            "id":1,
+            "heritageLanguage":"English"
+         },
+         {
+            "id":2,
+            "heritageLanguage":"Tamil"
+         },
+         {
+            "id":3,
+            "heritageLanguage":"French"
+         },
+         {
+            "id":9,
+            "heritageLanguage":"Kannada"
+         },
+         {
+            "id":10,
+            "heritageLanguage":"Sanketi"
+         },
+         {
+            "id":11,
+            "heritageLanguage":"Telugu"
+         }
+      ],
+      "categorys":[
+         {
+            "id":1,
+            "categoryName":"Built-Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"architecture, public space, parks, public art, street scenes, neighborhoods"
+         },
+         {
+            "id":2,
+            "categoryName":"Urban Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"Urban Life"
+         },
+         {
+            "id":3,
+            "categoryName":"Natural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"forests, rivers, water bodies, wetlands, mangroves, beaches, ocean, undeveloped places, wildlife..."
+         },
+         {
+            "id":4,
+            "categoryName":"Intangible Cultural Heritage",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"art & culture, history, folklore, cuisine, fashion, design, traditions, economy, education, ways-of-life, sports & games..."
+         },
+         {
+            "id":5,
+            "categoryName":"Spiritual Practice",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"religious practice, ritual, internal cultivation.."
+         },
+         {
+            "id":6,
+            "categoryName":"Lived Experience",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":"stories, interviews, profiles, biographies, memories, portraits..."
+         },
+         {
+            "id":7,
+            "categoryName":"Village Life",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":8,
+            "categoryName":"Tamil Culture",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":9,
+            "categoryName":"French Influence",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":10,
+            "categoryName":"Other Indian Influence",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         },
+         {
+            "id":11,
+            "categoryName":"Other Foreign Influence",
+            "categoryIcon":null,
+            "categoryIconContentType":null,
+            "categoryDecription":null
+         }
+      ]
+   }
+]

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/miPause"
+        android:icon="@drawable/ic_menu_camera"
+        app:showAsAction="always"
+
+        android:title="Camera">
+    </item>
+
+    <item
+        android:id="@+id/miText"
+        android:icon="@drawable/ic_infobox_info_icon"
+        app:showAsAction="always"
+
+        android:title="Text">
+    </item>
+</menu>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.janastu.heritageapp.geoheritagev2.client">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NETWORK" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.CaptureVideoActivity"
+            android:label="@string/title_activity_capture_video"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CaptureAudioActivity"
+            android:label="@string/title_activity_capture_audio"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FilePicker"
+            android:label="Pick File"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CaptureImageActivity"
+            android:label="@string/title_activity_capture_image"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/title_activity_splash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CaptureTextActivity"
+            android:label="@string/title_activity_capture_text"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MaterialMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.MaterialListUploadActivity"
+            android:label="@string/title_activity_material_list_upload"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BrowseAndUploadActivity"
+            android:label="@string/title_activity_browse_and_upload"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.BrowseAndUploadActivity2"
+            android:label="@string/title_activity_browse_and_upload2"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".activity.CaptureImageActivity2"
+            android:label="@string/title_activity_capture_image2"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".SimpleMainActivity"
+            android:label="@string/title_activity_simple_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activity.fragments.MapActivity"
+            android:label="@string/title_activity_map"
+            android:parentActivityName=".SimpleMainActivity"
+            android:theme="@style/MyMaterialTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.janastu.heritageapp.geoheritagev2.client.SimpleMainActivity" />
+        </activity>
+    </application>
+
+</manifest>

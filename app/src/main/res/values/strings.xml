@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">Pondy Heritage Map </string>
+
+    <string name="title_section1">Heritage Map  </string>
+    <string name="title_section2">Heritage Map  </string>
+    <string name="title_section3">Heritage Map  </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Refresh Map</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_file_up_load">Upload Files</string>
+
+    <string name="accessToken">pk.eyJ1IjoibXVyYWxpaHI3NyIsImEiOiJjaWo5c2tqZjYwMDNtdXhseGFqeHlsZnQ4In0.W_DdV-qM8lNZzacVotHDEA</string>
+    <string name="title_activity_capture_image">Add Image</string>
+    <string name="title_activity_capture_audio">Add Audio</string>
+    <string name="title_activity_capture_video">Add Video</string>
+    <string name="title_activity_capture_text">Add Text</string>
+    <string name="action_browse_upload">Browse  </string>
+
+    <string name="action_capture_image">Add Image</string>
+    <string name="action_capture_audio">Add Audio</string>
+    <string name="action_capture_video">Add Video</string>
+    <string name="action_capture_text">Add Text</string>
+    <string name="title_activity_list_file_up_load">List Files </string>
+    <string name="title_activity_greeting_actvity">GreetingActvity</string>
+
+    <string name="action_search">Search</string>
+    <string name="id_label">The ID is</string>
+    <string name="id_value">[id]</string>
+    <string name="content_label">The Content is</string>
+    <string name="content_value">[content]</string>
+    <string name="action_refresh">Refresh</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Pondicherry Heritage </string>
+
+
+    <string name="title_activity_register">Register a User</string>
+    <string name="title_activity_detail">User detail</string>
+
+    <string name="prompt_username">UserName</string>
+    <string name="prompt_token">Access Token</string>
+    <string name="prompt_id">User id</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_first_name">First name</string>
+    <string name="prompt_password">Password </string>
+    <string name="prompt_last_name">Last name</string>
+
+    <string name="action_sign_in_short">Log in</string>
+    <string name="action_register">Register</string>
+    <string name="action_delete">Delete user</string>
+    <string name="action_update">Update</string>
+
+    <string name="register_progress">Registering&#8230;</string>
+    <string name="update_progress">Updating&#8230;</string>
+    <string name="delete_progress">Deleting&#8230;</string>
+    <string name="login_progress_signing_in">Signing in&#8230;</string>
+    <string name="specialmessage">Why is Pondicherry Special to you ? in&#8230;</string>
+
+    <string name="success_delete">User deleted!</string>
+    <string name="success_login">Success! User loged in</string>
+    <string name="success_registration">Success! Registered Successfullty</string>
+    <string name="success_update">User updated!</string>
+    <string name="success_create">Success!! User created</string>
+
+    <string name="change_for_update">You have to change anything</string>
+    <string name="title_activity_splash">Splash </string>
+    <string name="title_activity_material_main">MaterialMainActivity</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_friends">Friends</string>
+    <string name="nav_item_notifications">Messages</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+    <string name="title_activity_material_list_upload">Upload File To Server</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Current App Configured</string>
+    <string name="pref_default_display_name">Pondymap</string>
+
+    <string name="pref_title_add_friends_to_messages">Select Current Application</string>
+
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data sync</string>
+
+    <string name="pref_title_sync_groups">Sync Groups</string>
+    <string name="pref_title_sync_apps">Sync Apps</string>
+
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_browse_and_upload">BrowseAndUploadActivity</string>
+    <string name="title_activity_browse_and_upload2">BrowseAndUploadActivity2</string>
+    <string name="title_activity_capture_image2">Take Photo</string>
+    <string name="title_activity_simple_main">Heritage Map</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="people_map_heading">PEOPLE MAP</string>
+    <string name="people_map_content">Heritage consists of the environment and cultural traditions we pass from one generation to the next.  It is not for experts and scholars to tell use what our heritage is.  We know it instinctively.   This map is developed 100% from the contributions of people like you.  Residents and visitors alike share the things they find worthy of passing-down from generation to generation. The map will be richer if you also contribute!</string>
+    <string name="collaborate_map_heading">COLLABORATE</string>
+    <string name="collaborate_map_content">PONDICHERRY HERITAGE MAP Curated by: Indian National Trust for Art and Cultural Heritage (INTACH) Pondicherry 62, Auribindo Salai Pondicherry 605001 Puducherry  +91 413 222 5991 intachpondicherry.org</string>
+    <string name="howto_map_heading">HOWTO</string>
+    <string name="howto_map_content">The Pondicherry Heritage Map is simple and intuitive.  Clicking on a marker will bring-up an image, video, sound recording, or text that someone has tagged to that location.  Mapp allows you to:  ZOOM in or out, so you see exactly the portion of the map you are interested in FILTER the visible markers based on the type of heritage represented, the type of media, the age of the content provider, and other criteria. SEARCH for the content that interests you Other features will be added soon, so check back often.</string>
+    <string name="title_activity_map">MapActivity</string>
+</resources>

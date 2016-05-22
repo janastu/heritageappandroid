@@ -1,0 +1,135 @@
+<!-- copyrighted content owned by Android Arena (www.androidarena.co.in)-->
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#e8e8e7"
+            android:orientation="vertical" >
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="#13b586"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true">
+
+
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Login"
+                      android:textColor="#ffffff"
+                      android:layout_marginLeft="25dp"
+                      android:textSize="18sp"
+                      android:textStyle="bold"
+
+                      android:layout_gravity="center_horizontal|center_vertical"/>
+
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dp"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:layout_marginLeft="16dp"
+                      android:layout_marginTop="16dp"
+                      android:layout_marginRight="16dp"
+                      android:layout_marginBottom="30dp"
+                      android:orientation="vertical"
+                      android:gravity="center_horizontal"
+                      android:background="@color/colorGrey"
+        >
+
+            <ImageView android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:background="@drawable/rangoliicon"
+                       android:layout_marginTop="15dp"
+                       android:layout_gravity="center_horizontal"/>
+
+            <EditText        android:id="@+id/userName"
+                             android:layout_width="fill_parent"
+                      android:layout_height="40dp"
+                      android:hint="Username"
+                      android:background="#f3f3f3"
+
+                      android:paddingLeft="5dp"
+                      android:layout_marginTop="30dp"/>
+
+            <EditText android:id="@+id/password"
+                      android:layout_width="fill_parent"
+                      android:layout_height="40dp"
+                      android:hint="Password"
+                      android:background="#f3f3f3"
+                      android:paddingLeft="5dp"
+                      android:password="true"
+                      android:layout_marginTop="15dp"/>
+
+
+            <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+            >
+
+
+
+            </LinearLayout>
+            <Button  android:id="@+id/btnlogin"
+                     android:layout_width="190dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="submit"
+                    android:textColor="#fff"
+                    android:textSize="13dp"
+                    android:background="#13b586"/>
+
+
+
+            <Button  android:id="@+id/btn_Register"
+                     android:layout_width="190dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Register (New User)"
+                    android:textColor="#fff"
+                    android:textSize="13dp"
+                    android:background="#2683c2"/>
+
+            <Button android:layout_width="190dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="Forgot Password"
+                    android:textColor="#fff"
+                    android:textSize="13dp"
+                    android:background="#eb543b"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.janastu.heritageapp.geoheritagev2.client.activity.fragments.TabFragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:maxLines="3"
+                android:padding="8dp"
+                android:text="A PEOPLE'S MAPPING PROJECT"
+                android:textColor="#222"
+                android:textStyle="bold"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:maxLines="13"
+                android:padding="8dp"
+                android:text="Heritage consists of the environment and cultural traditions we pass from one generation to the next.  It is not for experts and scholars to tell use what our heritage is.  We know it instinctively.
+
+This map is developed 100% from the contributions of people like you.  Residents and visitors alike share the things they find worthy of passing-down from generation to generation. The map will be richer if you also contribute!"
+                android:textColor="#666"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
