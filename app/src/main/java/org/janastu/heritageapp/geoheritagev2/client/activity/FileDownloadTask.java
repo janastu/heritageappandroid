@@ -74,7 +74,7 @@ public class FileDownloadTask extends AsyncTask<Void, Integer, Void> {
         Log.d(TAG, "  getHeritageGroup   " + group);
         RestServerComunication.setContext(context);
         RestServerComunication.init();
-        boolean result = RestServerComunication.postSignInDataToserver2( context, title, description,category,language,group,uploadFile,latitude,longitude,mediaInt);
+        boolean result = RestServerComunication.postSignInDataToserver2( context, title, description,category,language,group,uploadFile,latitude,longitude,mediaInt,"","");
 
 
 

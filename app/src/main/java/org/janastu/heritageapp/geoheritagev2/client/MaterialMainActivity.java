@@ -501,7 +501,7 @@ public class MaterialMainActivity extends AppCompatActivity implements FragmentD
                 {
 
                     RestServerComunication.setContext(getApplicationContext());
-                    fc = RestServerComunication.getAllFeatures(getApplicationContext());
+                    fc = RestServerComunication.getAllFeatures(  );
                     //write to string ;
 
 

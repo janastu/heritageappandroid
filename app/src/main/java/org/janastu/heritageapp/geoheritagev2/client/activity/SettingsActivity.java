@@ -22,6 +22,7 @@ import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,12 +30,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.janastu.heritageapp.geoheritagev2.client.MaterialMainActivity;
 import org.janastu.heritageapp.geoheritagev2.client.R;
+import org.janastu.heritageapp.geoheritagev2.client.SimpleMainActivity;
+import org.janastu.heritageapp.geoheritagev2.client.fragments.services.MapAppsService;
 import org.janastu.heritageapp.geoheritagev2.client.fragments.services.MapAppsServiceImpl;
 import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageAppDTO;
 import org.janastu.heritageapp.geoheritagev2.client.rest.HeritageApp;
 import org.janastu.heritageapp.geoheritagev2.client.rest.RestGroupComunication;
 import org.springframework.web.client.HttpServerErrorException;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -76,6 +80,30 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
         return a;
 
+    }
+
+    public static String getCurrentApp()
+    {
+        if(currentapp == null)
+        {
+            MapAppsServiceImpl mapService = new MapAppsServiceImpl();
+            mapService.setContext(context);
+            try {
+                HeritageAppDTO[]  app = mapService.getAllApps();
+                currentapp = app[0].getName();
+            } catch (IOException e) {
+                currentapp="PondyMap";
+                e.printStackTrace();
+            }
+
+            catch ( Exception e) {
+                currentapp="PondyMap";
+                e.printStackTrace();
+            }
+        }
+
+
+        return currentapp;
     }
     private static Preference.OnPreferenceChangeListener sBindPreferenceSummaryToValueListener = new Preference.OnPreferenceChangeListener() {
         @Override
@@ -162,8 +190,30 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         .getString(preference.getKey(), ""));
     }
     @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        } else if(id==android.R.id.home)
+        {
+            onBackPressed();
+            //finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         restGroupComunication = new RestGroupComunication(getApplicationContext());
         restGroupComunication.init();
@@ -208,7 +258,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      */
     protected boolean isValidFragment(String fragmentName) {
         return PreferenceFragment.class.getName().equals(fragmentName)
-                || GeneralPreferenceFragment.class.getName().equals(fragmentName)
+
                 || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
                 ;
     }
@@ -217,61 +267,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * This fragment shows general preferences only. It is used when the
      * activity is showing a two-pane settings UI.
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class GeneralPreferenceFragment extends PreferenceFragment {
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.pref_general);
-            setHasOptionsMenu(true);
-            final ListPreference lp = (ListPreference) findPreference("application_list");
-            CharSequence[] entries = { "PondyMap", "KaveriMap" };
-            CharSequence[] entryValues = {"1" , "2"};
-            lp.setEntries(entries);
-            lp.setDefaultValue("1");
-            lp.setEntryValues(entryValues);
-            // THIS IS REQUIRED IF YOU DON'T HAVE 'entries' and 'entryValues' in your XML
-
-
-            lp.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-
-                    Log.d("onPreferenceClick", preference.getKey().toString());
-                    bindPreferenceSummaryToValue(findPreference("application_list"));
-                    if ((preference instanceof ListPreference) && (preference.getKey().equals("application_list"))) {
-                        ListPreference lp = (ListPreference) preference;
-                        return true;
-                    }
-                    return false;
-
-                }
-            });
-
-            // Bind the summaries of EditText/List/Dialog/Ringtone preferences
-            // to their values. When their values change, their summaries are
-            // updated to reflect the new value, per the Android Design
-            // guidelines.
-//            bindPreferenceSummaryToValue(findPreference("example_text"));
-        //    bindPreferenceSummaryToValue(findPreference("example_list"));
-        }
-
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            int id = item.getItemId();
-            if (id == android.R.id.home) {
-                startActivity(new Intent(getActivity(), SettingsActivity.class));
-                return true;
-            }
-            return super.onOptionsItemSelected(item);
-        }
-    }
-
-    /**
-     * This fragment shows notification preferences only. It is used when the
-     * activity is showing a two-pane settings UI.
-     */
-
+    /*@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 
     /**
      * This fragment shows data and sync preferences only. It is used when the
@@ -286,6 +282,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_data_sync);
             setHasOptionsMenu(true);
+
+
             //check if internet exists -
             //else get from the local file ;
 
@@ -298,26 +296,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
             try {
                 
-                /*if(isNetworkAvailable()) {
-                    heritageAppDTO = restGroupComunication.getAllApps(getActivity().getApplicationContext());
-                    Log.d(TAG, "RECEIVED FROM SERVER apps" + heritageAppDTO.length + heritageAppDTO.toString());
 
-
-                    SharedPreferences.Editor editor = settings.edit();
-
-                    ObjectMapper mapper = new ObjectMapper();
-                    String jsonInString = mapper.writeValueAsString(heritageAppDTO);
-                    editor.putString(MaterialMainActivity.PREFS_JSON_APPINFO, jsonInString);
-                    editor.commit();
-                }
-                else {
-                    SharedPreferences.Editor editor = settings.edit();
-                    ObjectMapper mapper = new ObjectMapper();
-                    String jsonAppString = settings.getString(MaterialMainActivity.PREFS_JSON_APPINFO, "");
-                    heritageAppDTO = mapper.readValue(jsonAppString, HeritageAppDTO[].class);
-                    Log.d(TAG, "heritageAppDTO2 reading from settnigs"+heritageAppDTO);
-                    
-                }*/
                 MapAppsServiceImpl mapAppsService = new MapAppsServiceImpl();
                 mapAppsService.setContext(getActivity().getApplicationContext());
                 heritageAppDTO =  mapAppsService.getAllApps();
@@ -373,7 +352,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
 
 
-            final ListPreference lp2 = (ListPreference) findPreference("sync_groups");
+        /*    final ListPreference lp2 = (ListPreference) findPreference("sync_groups");
 
 
             CharSequence[] entries2 = { "PondyMap", "KaveriMap" };
@@ -398,7 +377,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     return false;
 
                 }
-            });
+            });*/
         }
 
         public boolean isNetworkAvailable() {

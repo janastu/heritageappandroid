@@ -121,21 +121,32 @@ public class GeoTagMediaDBHelper extends SQLiteOpenHelper {
                                   Double longitude, String consolidatedTags, String urlOrfileLink,
                                   String heritageCategory, String heritageLanguage, String heritageGroup, Integer mediaType, Long fileSize) {
 
+//writing into DB;
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(DATA_COLUMN_TITLE, title);
+        Log.d("inserting ", title);
         contentValues.put(DATA_COLUMN_DESCRPITION, description);
-        contentValues.put(DATA_COLUMN_LATITUDE,latitude );
+        Log.d("inserting ", description);
+        contentValues.put(DATA_COLUMN_LATITUDE, latitude);
+        Log.d("latitude ", latitude.toString());
         contentValues.put(DATA_COLUMN_LONGITUDE, longitude);
+        Log.d("longitude ", longitude.toString());
         String  currentTime = null;;
         contentValues.put(DATA_COLUMN_TIME, currentTime);
         contentValues.put(DATA_COLUMN_ADDRESS,address );
+        Log.d("insertingaddress ", address);
         contentValues.put(DATA_COLUMN_CATEGORY, heritageCategory);
+        Log.d("insert   Category ", heritageCategory);
         contentValues.put(DATA_COLUMN_LANGUAGE, heritageLanguage);
+        Log.d(" ins Language ", heritageLanguage);
         contentValues.put(DATA_COLUMN_GROUP, heritageGroup);
+        Log.d("inserting heritageGroup", heritageGroup);
         contentValues.put(DATA_COLUMN_UPLOAD_STATUS, false);
         contentValues.put(DATA_COLUMN_MEDIA_TYPE, mediaType);
+
+        Log.d("inserting mediaType", mediaType.toString());
         contentValues.put(DATA_COLUMN_FILE_SIZE,fileSize.intValue() );
         contentValues.put(DATA_COLUMN_FILE_NAME,urlOrfileLink );
         long id = db.insert(DATA_TABLE_NAME, null, contentValues);

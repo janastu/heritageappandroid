@@ -23,11 +23,14 @@
 
     <android.support.design.widget.TabLayout
     android:id="@+id/tab_layout"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@+id/toolbar"
     android:background="?attr/colorPrimary"
     android:elevation="6dp"
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        android:overScrollMode="never"
     android:minHeight="?attr/actionBarSize"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <android.support.v4.view.ViewPager
@@ -41,7 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:background="@color/colorLightSalmon"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:tint="@color/white"
+        android:src="@drawable/ic_action_home" />
 
 </android.support.design.widget.CoordinatorLayout>

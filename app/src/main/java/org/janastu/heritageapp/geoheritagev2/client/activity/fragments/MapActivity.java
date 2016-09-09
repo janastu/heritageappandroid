@@ -1,5 +1,6 @@
 package org.janastu.heritageapp.geoheritagev2.client.activity.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.view.Menu;
 import android.view.MenuItem;
 import org.janastu.heritageapp.geoheritagev2.client.R;
+import org.janastu.heritageapp.geoheritagev2.client.SimpleMainActivity;
+import org.janastu.heritageapp.geoheritagev2.client.activity.SettingsActivity;
 import org.janastu.heritageapp.geoheritagev2.client.fragments.services.MapAppsServiceImpl;
 import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageAppDTO;
 
@@ -29,6 +32,7 @@ public class MapActivity extends AppCompatActivity implements MapActivityFragmen
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
+    String currentApp;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     MapAppsServiceImpl mapAppsService = new MapAppsServiceImpl();
     /**
@@ -49,13 +53,21 @@ public class MapActivity extends AppCompatActivity implements MapActivityFragmen
         heritageAppDTO = mapAppsService.getAllApps();
         int length = heritageAppDTO.length;
 
-        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        for(HeritageAppDTO app: heritageAppDTO)
-        {
-            tabLayout.addTab(tabLayout.newTab().setText(app.getName()));
-        }
 
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        /*for(HeritageAppDTO app: heritageAppDTO)
+        {
+
+        }*/
+        currentApp =  SettingsActivity.getCurrentApp();
+       tabLayout.addTab(tabLayout.newTab().setText(currentApp));
+
+
+        //explore current app;
+
+
+      //  tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -100,11 +112,13 @@ public class MapActivity extends AppCompatActivity implements MapActivityFragmen
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        fab.setBackgroundColor(getResources().getColor(R.color.colorLightSalmon));
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(getApplicationContext(), SimpleMainActivity.class);
+                startActivity(i);
             }
         });
 
@@ -157,25 +171,9 @@ public class MapActivity extends AppCompatActivity implements MapActivityFragmen
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             // return PlaceholderFragment.newInstance(position + 1);
-            MapActivityFragment tab3 = MapActivityFragment.newInstance( Integer.toString(position), "");
+           MapActivityFragment tab3 = MapActivityFragment.newInstance( Integer.toString(position), currentApp);
             return tab3;
-           /* switch (position) {
-                case 0:
 
-                    MapActivityFragment tab1 = MapActivityFragment.newInstance("0", ""  );
-                    return tab1;
-                case 1:
-
-                    MapActivityFragment tab2 = MapActivityFragment.newInstance("1", "" );
-                    return tab2;
-
-                case 2:
-
-                    MapActivityFragment tab3 = MapActivityFragment.newInstance( "2");
-                    return tab3;
-                default:
-                    return null;
-            }*/
         }
 
         @Override

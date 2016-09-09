@@ -41,7 +41,7 @@
     <string name="title_activity_register">Register a User</string>
     <string name="title_activity_detail">User detail</string>
 
-    <string name="prompt_username">UserName</string>
+    <string name="prompt_username">You are not logged in ! Pls login</string>
     <string name="prompt_token">Access Token</string>
     <string name="prompt_id">User id</string>
     <string name="prompt_email">Email</string>
@@ -113,7 +113,7 @@
     </string-array>
 
     <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Data sync</string>
+    <string name="pref_header_data_sync">Select Current Map App</string>
 
     <string name="pref_title_sync_groups">Sync Groups</string>
     <string name="pref_title_sync_apps">Sync Apps</string>

@@ -67,10 +67,10 @@ public class MaterialListUploadActivity extends AppCompatActivity {
 
         List<DownloadInfo> data = getAllDownloadInfo();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-        adapter = new Recycler_View_Adapter(data, this);
-        recyclerView.setAdapter(adapter);
+       // adapter = new Recycler_View_Adapter(data, this);
+        //recyclerView.setAdapter(adapter);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
 

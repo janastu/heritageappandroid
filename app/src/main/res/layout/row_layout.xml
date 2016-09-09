@@ -22,23 +22,16 @@
             android:layout_height="wrap_content"
             android:padding="1dp">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="16dp" />
+
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TITLE"
-                android:layout_below="@+id/imageView"
                 android:textColor="@color/black"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+
+                 />
 
 
             <TextView
@@ -46,9 +39,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
-                android:layout_below="@+id/title"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/title"
+                android:layout_toLeftOf="@+id/downloadButton"
+               />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/description"
+                android:layout_alignParentBottom="true"
+                />
 
             <TextView
                 android:id="@+id/downloadFileName"
@@ -56,9 +59,10 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:text="FILENAME"
-                android:layout_alignTop="@+id/clearButton"
-                android:layout_toLeftOf="@+id/clearButton"
-                android:layout_toStartOf="@+id/clearButton" />
+                android:visibility="invisible"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
 
 
@@ -84,9 +88,20 @@
                 android:text="Upload Complete - Clear Locally"
                 android:textColor="#fff"
                 android:textSize="7dp"
-
                 android:layout_below="@+id/downloadButton"
                 android:background="#eb543b"/>
+
+
+
+
+            <ProgressBar
+                android:id="@+id/downloadProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
 
 

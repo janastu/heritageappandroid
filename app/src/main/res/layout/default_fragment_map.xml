@@ -22,9 +22,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include
-                android:id="@+id/toolbar"
-                layout="@layout/toolbar" />
+
 
 
             <LinearLayout
@@ -33,27 +31,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Select Region"
-                    android:textColor="#000"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="25dp"
-                    android:textStyle="bold"
-                    android:layout_gravity="left|center_vertical"/>
 
-
-
-                <Spinner
-                    android:id="@+id/spinnerRegion"
-                    android:background="@color/white"
-                    android:textColor="#000"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:popupBackground="@color/colorLightGrey"
-                    />
             </LinearLayout>
         </LinearLayout>
 
@@ -73,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Refresh  "
-                android:id="@+id/logOutButton2"
+                android:id="@+id/refreshMap"
 
                 android:textColor="#fff"
                 android:textSize="13dp"

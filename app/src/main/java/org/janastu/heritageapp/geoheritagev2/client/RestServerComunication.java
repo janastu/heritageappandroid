@@ -70,7 +70,8 @@ public class RestServerComunication {
 
     private static final String GET_ALL_USER_GROUPS = "/api/getUserGroups/user";
 
-    private static final String GET_ALL_TAGS = "api/mapp";//allGeoTagHeritageEntitysGeoJson
+    private static final String GET_ALL_TAGS = "api/mapp";//
+    private static final String GET_ALL_APPS = "api/heritageApps";//
 
     private static final String UPLOAD_CREATE_MEDIA = "api/createAnyMediaGeoTagHeritageFromMobile";
     public RestServerComunication(Context context) {
@@ -83,11 +84,11 @@ public class RestServerComunication {
     public static void init()
     {
 
-        SharedPreferences settings = context.getSharedPreferences(MaterialMainActivity.PREFS_NAME, 0);
+        SharedPreferences settings = context.getSharedPreferences(SimpleMainActivity.PREFS_NAME, 0);
 
-        userName  = settings.getString(MaterialMainActivity.PREFS_USERNAME , "");
-        password = settings.getString(MaterialMainActivity.PREFS_PASSWORD , "");
-        String currentToken = settings.getString(MaterialMainActivity.PREFS_ACCESS_TOKEN , "");
+        userName  = settings.getString(SimpleMainActivity.PREFS_USERNAME , "");
+        password = settings.getString(SimpleMainActivity.PREFS_PASSWORD , "");
+        String currentToken = settings.getString(SimpleMainActivity.PREFS_ACCESS_TOKEN , "");
 
         Log.d(TAG, "RestServerComunication SharedPreferences userName"+userName);
         Log.d(TAG, "RestServerComunication SharedPreferences password" + password);
@@ -343,28 +344,19 @@ public class RestServerComunication {
 
 
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
-    public static FeatureCollection getAllFeatures(Context c)
+    public static FeatureCollection getAllFeatures( )
 
     {
 
         HeritageCategoryListPojo heritageCategoryListPojo;
-        init();
+//        init();
 
-        Log.d(TAG, "getAllFeatures userName"+ userName);
+     /*   Log.d(TAG, "getAllFeatures userName"+ userName);
         Log.d(TAG, "getAllFeatures password"+ password);
-        LoginResponse response = authenticate(userName, password);
-
-
+        LoginResponse response = authenticate(userName, password);*/
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
-
-        // Set headers to include multiform
-
-
-////////////////////////////////////
-
 
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.setRequestFactory(new HttpComponentsClientHttpRequestFactory());
@@ -373,7 +365,7 @@ public class RestServerComunication {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        headers.set("x-auth-token", response.getToken());
+      //  headers.set("x-auth-token", response.getToken());
 
         List<MediaType> mediaTypeList = new ArrayList<MediaType>();
         mediaTypeList.add(MediaType.APPLICATION_JSON);
@@ -385,16 +377,10 @@ public class RestServerComunication {
         messageConverters.add(new MappingJackson2HttpMessageConverter());
         messageConverters.add(new FormHttpMessageConverter());
         restTemplate.setMessageConverters(messageConverters);
-
-
         UriComponentsBuilder builder = UriComponentsBuilder
                 .fromUriString(UPLOAD_SERVER_URI + GET_ALL_TAGS);
-
         URI url = builder.build().toUri();
-
         FeatureCollection fc = (FeatureCollection) restTemplate.postForObject(url, request, FeatureCollection.class);
-
-
         Log.d(TAG, "From Server received succesds");
         try {
             Log.d(TAG, "From Server received category objects: - " + fc.toString());
@@ -537,7 +523,7 @@ public class RestServerComunication {
     }
 
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
-    public static boolean postSignInDataToserver2(Context c, String title, String description, String category, String language,String group, File mpictureFile, String latitude, String longitude, Integer mediatype) {
+    public static boolean postSignInDataToserver2(Context c, String title, String description, String category, String language,String group, File mpictureFile, String latitude, String longitude, Integer mediatype, String userName, String appName) {
         Log.d(TAG, "Calling REST to upload file");
         init();
 //UPLOAD_CREATE_MEDIA
@@ -570,7 +556,7 @@ public class RestServerComunication {
             parts.add("longitude", longitude);
             parts.add("groupName", group);
             parts.add("userName", userName);
-            parts.add("appName", SettingsActivity.getCurrentAppInfo().getName());
+            parts.add("appName", appName);
             String device =  android.os.Build.MODEL +" brand = "+android.os.Build.BRAND +" OS version = "+android.os.Build.VERSION.RELEASE + " SDK version = " +android.os.Build.VERSION.SDK_INT ;
            // String userAgent = getAndroidVersionName()+getAndroidManufacturer();
             parts.add("userAgent", device);

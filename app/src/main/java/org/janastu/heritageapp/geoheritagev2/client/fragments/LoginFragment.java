@@ -139,6 +139,13 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 //finish();
                 break;
 
+            case R.id.btn_Register:
+
+
+                mListener.registerBtnClicked();
+
+                break;
+
 
         }
     }
@@ -195,6 +202,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         void onLoginFragmentInteraction(Uri uri);
         public void onLoginSuccess(String username, String password, LoginResponse r, String d);
         public void onLoginFailure(LoginResponse result);
+        public void registerBtnClicked();
         public void onLoginDateStillValid();
     }
 
@@ -214,7 +222,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
         @Override
         protected LoginResponse doInBackground(String... params) {
-            User registered = null;
+
             LoginResponse r = null;
             try {
                 r =  loginService.login(username,password);

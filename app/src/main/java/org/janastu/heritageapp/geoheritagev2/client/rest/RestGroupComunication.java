@@ -379,11 +379,11 @@ public class RestGroupComunication {
 
 
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
-    public static   HeritageAppDTO[]   getAllApps(Context c)
+    public static   HeritageAppDTO[]   getAllApps( )
     {
 
-        Log.d(TAG, "getAllApps Server call --s:");
-        LoginResponse response = authenticate( userName,   password);
+      /*  Log.d(TAG, "getAllApps Server call --s:");
+        LoginResponse response = authenticate( userName,   password);*/
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -402,7 +402,7 @@ public class RestGroupComunication {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        headers.set("x-auth-token", response.getToken());
+      //  headers.set("x-auth-token", response.getToken());
 
         List<MediaType> mediaTypeList = new ArrayList<MediaType>();
         mediaTypeList.add(MediaType.APPLICATION_JSON);

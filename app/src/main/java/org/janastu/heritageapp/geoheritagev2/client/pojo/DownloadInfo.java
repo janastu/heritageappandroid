@@ -113,6 +113,7 @@ public class DownloadInfo {
 
     public void setUrlOrfileLink(String urlOrfileLink) {
         this.urlOrfileLink = urlOrfileLink;
+        mFilename = urlOrfileLink;
     }
 
     public String getHeritageCategory() {
@@ -189,5 +190,29 @@ public class DownloadInfo {
 
     public String getFilename() {
         return mFilename;
+    }
+
+    @Override
+    public String toString() {
+        return "DownloadInfo{" +
+                "id=" + id +
+                ", mDownloadState=" + mDownloadState +
+                ", mProgress=" + mProgress +
+                ", mProgressBar=" + mProgressBar +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", address='" + address + '\'' +
+                ", latitude='" + latitude + '\'' +
+                ", longitude='" + longitude + '\'' +
+                ", consolidatedTags='" + consolidatedTags + '\'' +
+                ", urlOrfileLink='" + urlOrfileLink + '\'' +
+                ", heritageCategory='" + heritageCategory + '\'' +
+                ", heritageLanguage='" + heritageLanguage + '\'' +
+                ", heritageGroup='" + heritageGroup + '\'' +
+                ", mediaType='" + mediaType + '\'' +
+                ", mFilename='" + mFilename + '\'' +
+                ", mFileSize=" + mFileSize +
+                ", fileUploadstatus=" + fileUploadstatus +
+                '}';
     }
 }

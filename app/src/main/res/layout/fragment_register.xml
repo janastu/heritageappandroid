@@ -163,13 +163,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="I am  a Resident"
-                        android:id="@+id/radioButton"/>
+                        android:id="@+id/radioResident"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="I am a Visitor"
-                        android:id="@+id/radioButton2"/>
+                        android:id="@+id/radioVisitor"/>
 
 
                 </RadioGroup>

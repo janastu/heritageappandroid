@@ -143,8 +143,8 @@ public class DownloadInfoArrayAdapter extends ArrayAdapter<DownloadInfo> impleme
                 info.setDownloadState(DownloadInfo.DownloadState.QUEUED);
                 button.setEnabled(false);
                 button.invalidate();
-                FileDownloadTask task = new FileDownloadTask(context,info, pointer);
-                task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+              //  FileDownloadTask task = new FileDownloadTask(context,info, pointer);
+               // task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                 //show spinner to display upload
             }
         });

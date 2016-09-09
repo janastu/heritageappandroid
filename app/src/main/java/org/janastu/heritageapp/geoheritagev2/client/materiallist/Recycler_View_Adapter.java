@@ -1,7 +1,12 @@
 package org.janastu.heritageapp.geoheritagev2.client.materiallist;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,11 +15,19 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import org.janastu.heritageapp.geoheritagev2.client.R;
+import org.janastu.heritageapp.geoheritagev2.client.SimpleMainActivity;
 import org.janastu.heritageapp.geoheritagev2.client.activity.FileDownloadTask;
 import org.janastu.heritageapp.geoheritagev2.client.activity.MaterialListUploadActivity;
 import org.janastu.heritageapp.geoheritagev2.client.db.GeoTagMediaDBHelper;
+import org.janastu.heritageapp.geoheritagev2.client.fragments.UploadFragment;
+import org.janastu.heritageapp.geoheritagev2.client.fragments.services.DownloadResultReceiver;
+import org.janastu.heritageapp.geoheritagev2.client.fragments.services.FileUploadService;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.AppConstants;
 import org.janastu.heritageapp.geoheritagev2.client.pojo.DownloadInfo;
 import org.janastu.heritageapp.geoheritagev2.client.services.FileUploadStatusListener;
 
@@ -27,13 +40,18 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> imp
 
     private static final String TAG = "Recycler_View_Adapter";
     List<DownloadInfo> list = Collections.emptyList();
-    MaterialListUploadActivity context;
+    Context context;
+
+    UploadFragment.OnUploadFragmentInteractionListener uploadListenerServicePtr;
+
     GeoTagMediaDBHelper geoTagMediaDBHelper;
     FileUploadStatusListener pointer;
-    public Recycler_View_Adapter(List<DownloadInfo> list, MaterialListUploadActivity context) {
+    public Recycler_View_Adapter(List<DownloadInfo> list, Context context, UploadFragment.OnUploadFragmentInteractionListener uploadListener) {
         this.list = list;
         this.context = context;
         this.pointer = this;
+        uploadListenerServicePtr = uploadListener;
+
 
     }
 
@@ -46,16 +64,14 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> imp
     }
 
     @Override
-    public void onBindViewHolder(View_Holder holder, int position) {
+    public void onBindViewHolder(final View_Holder holder, int position) {
 
         final DownloadInfo info  = new DownloadInfo();
         info.setDescription(list.get(position).getTitle());
         info.setDownloadState(list.get(position).getDownloadState());
         info.setId(list.get(position).getId());
-
-
-
         String  uploadFile =  (list.get(position).getUrlOrfileLink()) ;
+
         info.setUrlOrfileLink(uploadFile);
         String title =  list.get(position).getTitle() ;
         info.setTitle(title);
@@ -76,12 +92,30 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> imp
         String mediatype = list.get(position).getMediaType();
         info.setMediaType(mediatype);
 
+        Integer medInt = Integer.parseInt(mediatype);
+
+
 
 
 
         holder.title.setText("Title - " + list.get(position).getTitle());
         holder.description.setText("Desc - "+list.get(position).getDescription());
         holder.downloadFileName.setText("File Name-"+uploadFile);
+
+        if(medInt == AppConstants.IMAGETYPE)
+        {
+            File imgFile = new  File(uploadFile);
+
+            if(imgFile.exists()){
+                try {
+                    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+                    holder.imageView.setImageBitmap(myBitmap);
+                } catch(Exception e)
+                {
+                    Toast.makeText(context, " EXCEPTION SHOWING IMAGE - "+ e, Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
         boolean uploadStatus = list.get(position).getFileUploadstatus();
         Log.d(TAG, "uploadStatus of the file" + uploadStatus);
         if (uploadStatus == false) {
@@ -92,6 +126,7 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> imp
             holder.button.setClickable(true);
             holder.button.setVisibility(View.VISIBLE);
 
+            holder.downloadProgressBar.setProgress(0);
 
             holder.clearButton.setText("  X");
             holder.clearButton.setEnabled(false);
@@ -102,6 +137,7 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> imp
             holder.button.setText("  X");
             holder.button.setEnabled(false);
             holder.button.setClickable(false);
+            holder.downloadProgressBar.setProgress(100);
             holder.button.setVisibility(View.INVISIBLE);
             holder.button.invalidate();
 
@@ -127,11 +163,50 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> imp
                 list.get(p).getDownloadState();
                 list.get(p).setDownloadState(DownloadInfo.DownloadState.QUEUED);
 
+                holder.downloadProgressBar.setProgress(10);
+                holder.downloadProgressBar.setMax(100);
+                final DownloadInfo info2  = new DownloadInfo();
+
+                info2.setId(list.get(p).getId());
+
+                String title =  list.get(p).getTitle();
+                info2.setTitle(title);
+
+                String description = list.get(p).getDescription();
+                info2.setDescription(description);
+
+
+                String  uploadFile =  (list.get(p).getUrlOrfileLink()) ;
+                info2.setUrlOrfileLink(uploadFile);
+
+                String category  = list.get(p).getHeritageCategory();
+                info2.setHeritageCategory(category);
+                String language = list.get(p).getHeritageLanguage();
+                info2.setHeritageLanguage(language);
+
+                String group  = list.get(p).getHeritageGroup();
+                info2.setHeritageGroup(group);
+
+
+
+                info2.setDownloadState(list.get(p).getDownloadState());
+
+
+                Log.d(TAG, "upload info" + info2);
+                Log.d(TAG, "upload info file "+info2.getUrlOrfileLink());
+                String latitude  =  list.get(p).getLatitude();
+                info2.setLatitude(latitude);
+                String longitude  = list.get(p).getLongitude();
+                info2.setLongitude(longitude);
+                String mediatype = list.get(p).getMediaType();
+                info2.setMediaType(mediatype);
+
+
                 button.setEnabled(false);
                 button.invalidate();
-                FileDownloadTask task = new FileDownloadTask(context,info, pointer);
-                task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                //show spinner to display upload
+
+
+                uploadListenerServicePtr.onUploadGeoMediaToServer(info2);
             }
         });
 
@@ -189,6 +264,11 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> imp
     public void animate(RecyclerView.ViewHolder viewHolder) {
      //   final Animation animAnticipateOvershoot = AnimationUtils.loadAnimation(context, R.anim.anticipate_overshoot_interpolator);
        // viewHolder.itemView.setAnimation(animAnticipateOvershoot);
+    }
+
+    public void notifyDataStateChanged() {
+
+
     }
 
 }

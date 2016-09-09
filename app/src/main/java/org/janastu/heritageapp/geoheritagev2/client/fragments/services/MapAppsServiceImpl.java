@@ -9,9 +9,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.geojson.FeatureCollection;
 import org.janastu.heritageapp.geoheritagev2.client.MaterialMainActivity;
 import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageAppDTO;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageCategory;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageGroup;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageLanguage;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by DESKTOP on 5/21/2016.
@@ -33,7 +38,8 @@ public class MapAppsServiceImpl  implements MapAppsService{
         ObjectMapper mapper = new ObjectMapper();
       //  String jsonAppString = settings.getString(MaterialMainActivity.PREFS_JSON_APPINFO, "");
         String jsonAppString ;
-        InputStream is = ctx.getAssets().open("appinfo.json");
+       InputStream is = ctx.getAssets().open("appinfo.json");
+      //  InputStream is  = ctx.openFileInput(UpdateAppInfoService.APP_FILENAME);
         int size = is.available();
         byte[] buffer = new byte[size];
         is.read(buffer);
@@ -46,6 +52,75 @@ public class MapAppsServiceImpl  implements MapAppsService{
 
         return heritageAppDTO;
     }
+    public Set<HeritageCategory> getAllCategoriesForApp(String currApp) throws IOException
+    {
+        Set<HeritageCategory> setCategory = new HashSet<HeritageCategory>();
+
+        HeritageAppDTO[] appDTOs =  this.getAllApps();
+        HeritageAppDTO selectedApp = null;
+
+
+        for(HeritageAppDTO app: appDTOs)
+        {
+            int res = app.getName().compareTo(currApp);
+            if(res == 0)
+            {
+                selectedApp = app;
+            }
+        }
+        if(selectedApp != null)
+            return selectedApp.getCategorys();
+        else
+            return setCategory;
+
+
+    }
+
+    public Set<HeritageGroup>    getAllGroupsForAApp(String currApp) throws IOException
+    {
+        Set<HeritageGroup> setGroup  = new HashSet<HeritageGroup>();
+
+
+        Set<HeritageCategory> setCategory = new HashSet<HeritageCategory>();
+
+        HeritageAppDTO[] appDTOs =  this.getAllApps();
+        HeritageAppDTO selectedApp = null;
+        for(HeritageAppDTO app: appDTOs)
+        {
+            int res = app.getName().compareTo(currApp);
+            if(res == 0)
+            {
+                selectedApp = app;
+            }
+        }
+        if(selectedApp != null)
+            return selectedApp.getGroups();
+        else
+            return setGroup;
+    }
+
+    public Set<HeritageLanguage>    getAllLanguagesForAApp(String currApp) throws IOException
+    {
+        Set<HeritageLanguage> setLanguages  = new HashSet<HeritageLanguage>();
+
+
+        Set<HeritageLanguage> setCategory = new HashSet<HeritageLanguage>();
+
+        HeritageAppDTO[] appDTOs =  this.getAllApps();
+        HeritageAppDTO selectedApp = null;
+        for(HeritageAppDTO app: appDTOs)
+        {
+            int res = app.getName().compareTo(currApp);
+            if(res == 0)
+            {
+                selectedApp = app;
+            }
+        }
+        if(selectedApp != null)
+            return selectedApp.getLanguages();
+        else
+            return setLanguages;
+    }
 
     @Override
     public FeatureCollection getAllFeatures() throws IOException {
@@ -54,7 +129,8 @@ public class MapAppsServiceImpl  implements MapAppsService{
         ObjectMapper mapper = new ObjectMapper();
         //  String jsonAppString = settings.getString(MaterialMainActivity.PREFS_JSON_APPINFO, "");
         String jsonAppString ;
-        InputStream is = ctx.getAssets().open("allmarkersmap.json");
+ //       InputStream is = ctx.getAssets().open("allmarkersmap.json");
+        InputStream is  = ctx.openFileInput(UpdateAppInfoService.MARKER_FILENAME);
         int size = is.available();
         byte[] buffer = new byte[size];
         is.read(buffer);
@@ -67,26 +143,6 @@ public class MapAppsServiceImpl  implements MapAppsService{
 
         return features;
     }
-/*
-    if(isNetworkAvailable()) {
-        heritageAppDTO = restGroupComunication.getAllApps(getActivity().getApplicationContext());
-        Log.d(TAG, "RECEIVED FROM SERVER apps" + heritageAppDTO.length + heritageAppDTO.toString());
 
-
-        SharedPreferences.Editor editor = settings.edit();
-
-        ObjectMapper mapper = new ObjectMapper();
-        String jsonInString = mapper.writeValueAsString(heritageAppDTO);
-        editor.putString(MaterialMainActivity.PREFS_JSON_APPINFO, jsonInString);
-        editor.commit();
-    }
-    else {
-        SharedPreferences.Editor editor = settings.edit();
-        ObjectMapper mapper = new ObjectMapper();
-        String jsonAppString = settings.getString(MaterialMainActivity.PREFS_JSON_APPINFO, "");
-        heritageAppDTO = mapper.readValue(jsonAppString, HeritageAppDTO[].class);
-        Log.d(TAG, "heritageAppDTO2 reading from settnigs"+heritageAppDTO);
-
-    }*/
 
 }

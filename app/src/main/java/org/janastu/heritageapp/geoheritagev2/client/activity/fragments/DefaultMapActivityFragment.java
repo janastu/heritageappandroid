@@ -1,38 +1,45 @@
 package org.janastu.heritageapp.geoheritagev2.client.activity.fragments;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.location.Location;
 import android.net.Uri;
-import android.support.v4.app.Fragment;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.os.Bundle;
-import android.os.Environment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
+import org.geojson.Feature;
+import org.geojson.FeatureCollection;
+import org.geojson.LngLatAlt;
 import org.geojson.Point;
-import org.janastu.heritageapp.geoheritagev2.client.MaterialMainActivity;
-import org.janastu.heritageapp.geoheritagev2.client.RestServerComunication;
-import org.janastu.heritageapp.geoheritagev2.client.db.DbTool;
+import org.janastu.heritageapp.geoheritagev2.client.R;
 import org.janastu.heritageapp.geoheritagev2.client.db.GeoTagMediaDBHelper;
 import org.janastu.heritageapp.geoheritagev2.client.fragments.services.MapAppsServiceImpl;
-import org.janastu.heritageapp.geoheritagev2.client.pojo.*;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.CheckedHeritageCategoryMap;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageAppDTO;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageCategory;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.HeritageRegionNameDTO;
+import org.janastu.heritageapp.geoheritagev2.client.pojo.OSMMarkerInfo;
+import org.janastu.heritageapp.geoheritagev2.client.services.LocationResultListener;
+import org.janastu.heritageapp.geoheritagev2.client.services.LocationService;
 import org.osmdroid.DefaultResourceProxyImpl;
 import org.osmdroid.api.IMapController;
 import org.osmdroid.api.IMapView;
@@ -42,47 +49,12 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.ItemizedOverlay;
 import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.ScaleBarOverlay;
-import org.geojson.*;
-import org.janastu.heritageapp.geoheritagev2.client.activity.*;
-import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.lang.reflect.Array;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipException;
-import java.util.zip.ZipOutputStream;
-
-import android.app.Activity;
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.*;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Bundle;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.text.util.Linkify;
-import android.util.Log;
-import android.view.*;
-import android.support.v4.widget.DrawerLayout;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-import org.janastu.heritageapp.geoheritagev2.client.R;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -96,7 +68,7 @@ import org.janastu.heritageapp.geoheritagev2.client.R;
  * Use the {@link TabFragment1#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MapActivityFragment extends Fragment {
+public class DefaultMapActivityFragment extends Fragment implements LocationResultListener,  View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -105,7 +77,7 @@ public class MapActivityFragment extends Fragment {
     private int  position;
     private MapView mMapView;
     private IMapController mMapController;
-    static HeritageAppDTO[] heritageAppDTO;
+    private static Location currentLocation;
     // OSM Droid
     List < Feature > fList;
     ArrayList < OSMMarkerInfo > points;
@@ -119,9 +91,9 @@ public class MapActivityFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     MapAppsServiceImpl mapAppsService = new MapAppsServiceImpl();
-    private OnFragmentInteractionListener mListener;
-
-    public MapActivityFragment() {
+    private OnDefaultMapFragmentInteractionListener mListener;
+    Button refreshButton;
+    public DefaultMapActivityFragment() {
         // Required empty public constructor
     }
 
@@ -129,28 +101,26 @@ public class MapActivityFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+
      * @return A new instance of fragment TabFragment1.
      */
     // TODO: Rename and change types and number of parameters
-    public static MapActivityFragment newInstance(String param1, String param2) {
-        MapActivityFragment fragment = new MapActivityFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+    public static DefaultMapActivityFragment newInstance(final Location curLocation)
+    {
+        DefaultMapActivityFragment fragment = new DefaultMapActivityFragment();
+        currentLocation = curLocation;
         return fragment;
     }
 
+    public static void updateLocation(Location curLocation)
+    {
+        currentLocation = curLocation;
+    }
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            position  = Integer.parseInt(mParam1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -159,89 +129,42 @@ public class MapActivityFragment extends Fragment {
         // Inflate the layout for this fragment
 
 
-        View rootView = inflater.inflate(R.layout.fragment_map, container, false);
+        View rootView = inflater.inflate(R.layout.default_fragment_map, container, false);
         mMapView = (MapView) rootView.findViewById(R.id.mapview2);
-        // mMapView.setTileSource(TileSourceFactory.MAPNIK);
-        mMapView.setTileSource(TileSourceFactory.MAPNIK);
 
+        mMapView.setTileSource(TileSourceFactory.MAPNIK);
+        //MAPQUEST license no more public;
         //   mapView.setTileSource(TileSourceFactory.MAPQUESTOSM);
         mMapView.setBuiltInZoomControls(true);
         mMapView.setMultiTouchControls(true);
         mMapController = mMapView.getController();
-        mMapController.setZoom(13);
-        HeritageAppDTO appDTO = null;
-        // Spinner Drop down elements
+            mMapController.setZoom(13);
+        //mMapController.setCenter();
         try {
 
 
             mapAppsService.setContext(getActivity().getApplicationContext());
-            heritageAppDTO =  mapAppsService.getAllApps();
-            for(HeritageAppDTO tempApp :heritageAppDTO )
+            GeoPoint gPt ;
+            if(currentLocation != null) {
+                gPt   = new GeoPoint(currentLocation.getLatitude(), currentLocation.getLongitude());
+                Toast.makeText(getActivity().getApplicationContext(), "GPS" + currentLocation.getLatitude() + ", " + currentLocation.getLongitude(), Toast.LENGTH_SHORT).show();
+            }
+            else
             {
-
-                if(tempApp.getName().compareTo(mParam2) == 0) {
-                    appDTO = tempApp;
-                }
+                gPt = new GeoPoint(12.922,77.671);//hard coding bang
             }
 
-            Set<HeritageCategory> categSet  = appDTO.getCategorys();
-            List<String> heritageCategoriesStringList = new ArrayList<String>();
-            for(HeritageCategory c:categSet)
-            {
-                heritageCategoriesStringList.add(c.getCategoryName());
-
-            }
-
-            Set<HeritageRegionNameDTO>  rSet = appDTO.getRegions();
-            final List<HeritageRegionNameDTO> rlist = new ArrayList<HeritageRegionNameDTO>(rSet);
-            HeritageRegionNameDTO firstRegion = rlist.get(0);
-            GeoPoint gPt = new GeoPoint(firstRegion.getCenterLatitude(), firstRegion.getCenterLongitude());
             mMapController.setCenter(gPt);
-
-            Set<HeritageRegionNameDTO> regionSet  = appDTO.getRegions();
-            List<String> regions = new ArrayList<String>();
-            for(HeritageRegionNameDTO g:regionSet)
-            {
-                regions.add(g.getName() );
-
-            }
-            ArrayAdapter<String> dataAdapterGroups = new ArrayAdapter<String>(getActivity().getApplicationContext(),  R.layout.simple_spinner_item, regions);
-            // Drop down layout style - list view with radio button
-            dataAdapterGroups.setDropDownViewResource( R.layout.simple_spinner_dropdown_item);
-            // attaching data adapter to spinner
-            Spinner spinnerRegion = (Spinner) rootView.findViewById(R.id.spinnerRegion);
-            spinnerRegion.setAdapter(dataAdapterGroups);
-            spinnerRegion.setOnItemSelectedListener(
-                    new AdapterView.OnItemSelectedListener() {
-                        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                       //     ((TextView)parent.getChildAt(0)).setTextColor(Color.rgb(255,255, 255));
-                            heritageRegion = parent.getItemAtPosition(pos).toString();
-                            Log.d(TAG, "selected heritageRegion "+heritageRegion.toString());     //prints the text in spinner item.
-
-                            HeritageRegionNameDTO newRegion = null;
-
-                            for(HeritageRegionNameDTO r :rlist)
-                            {
-
-                                if(r.getName().compareTo(heritageRegion) == 0 )
-                                {
-                                    newRegion = r;
-                                    GeoPoint gPt = new GeoPoint(newRegion.getCenterLatitude(), newRegion.getCenterLongitude());
-                                    mMapController.setCenter(gPt);
-                                    //new DefaultResourceProxyImpl(this);
-                                    new DrawGeoJSONOSM().execute();
-                                }
-                            }
+           // new DrawGeoJSONOSM(getActivity()).execute();
+            startLoadMarkerTask();
+            refreshButton = (Button) rootView.findViewById(R.id.refreshMap);
+            refreshButton.setOnClickListener(this);
 
 
-
-                        }
-                        public void onNothingSelected(AdapterView<?> parent) {
-                        }
-                    });
         }
         catch(Exception e)
         {
+            Toast.makeText(getActivity().getApplicationContext(), "ERROR in setting geo center ", Toast.LENGTH_SHORT).show();
 
         }
         return rootView;
@@ -250,21 +173,46 @@ public class MapActivityFragment extends Fragment {
 
     }
 
+
+    public void startLoadMarkerTask()
+    {
+        new DrawGeoJSONOSM(getActivity()).execute();
+    }
+
+    @Override
+    public void onClick(View v) {
+        Log.d(TAG, "btn clicked");
+        switch (v.getId()) {
+            case R.id.refreshMap:
+        ///start a task to get the gro markers
+                mListener.onDefaultMapFragmentInteraction(null);
+                break;
+
+        }
+    }
+
+    public void setCenterAndRedraw(final double aLatitude, final double aLongitude)
+    {
+        GeoPoint  gPt = new GeoPoint(aLatitude,aLongitude);
+        mMapController.setCenter(gPt);
+        //new DrawGeoJSONOSM(getActivity()).execute();
+    }
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onDefaultMapFragmentInteraction(uri);
         }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
+        if (context instanceof OnDefaultMapFragmentInteractionListener) {
+            mListener = (OnDefaultMapFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+                    + " must implement OnDefaultMapFragmentInteractionListener");
         }
     }
 
@@ -272,6 +220,14 @@ public class MapActivityFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onLocationResultAvailable(Location location) {
+
+        //need to change this ~
+
+
     }
 
     /**
@@ -284,17 +240,23 @@ public class MapActivityFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
+    public interface OnDefaultMapFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onDefaultMapFragmentInteraction(Uri uri);
     }
 
     private class DrawGeoJSONOSM extends AsyncTask < Void, Void, List < OSMMarkerInfo >> {
+        private final Context ctx;
         private ProgressDialog pdia;
+
+        public DrawGeoJSONOSM(Context context)
+        {
+            this.ctx = context;
+        }
         @Override
         protected void onPreExecute(){
             super.onPreExecute();
-            pdia = new ProgressDialog(getActivity());
+            pdia = new ProgressDialog(this.ctx);
             pdia.setMessage("Fetching map info...");
             pdia.show();
         }
@@ -365,6 +327,22 @@ public class MapActivityFragment extends Fragment {
             } catch (Exception e) {
                 Log.e(TAG, "Exception GeoJSON: " + e);
             }
+
+
+            OSMMarkerInfo currentMarker = new OSMMarkerInfo();
+            LngLatAlt currentP = new LngLatAlt();
+            if(currentLocation != null) {
+
+                Log.d(TAG, "currentlocation"+currentLocation.getLatitude() +"LONG"+currentLocation.getLongitude());
+
+                currentP.setLatitude(currentLocation.getLatitude());
+                currentP.setLongitude(currentLocation.getLongitude());
+                currentMarker.setLatLngOSM(currentP);
+                currentMarker.setDescription("CENTER");
+                currentMarker.setMediaType("CENTER");
+                points.add(currentMarker);
+              }
+            //AT THE END ass a marker with center variable
             return points;
         }
 
@@ -375,9 +353,6 @@ public class MapActivityFragment extends Fragment {
             redrawPoints();
         }
     }
-
-
-
     ////
     public List<OSMMarkerInfo> listContainsString(List<OSMMarkerInfo> list, List<String> categories)
     {
@@ -404,7 +379,6 @@ public class MapActivityFragment extends Fragment {
             }
             else
             {
-
                 Log.d(TAG, "S is null");
             }
         }
@@ -478,6 +452,11 @@ public class MapActivityFragment extends Fragment {
                 heritageLocationDrawable = this.getResources().getDrawable(
                         R.drawable.mapicontext);
             }
+
+            else if (mediaType.contains("CENTER")) {
+                heritageLocationDrawable = this.getResources().getDrawable(
+                        R.drawable.pin);
+            }
         }
         else
         {
@@ -504,6 +483,7 @@ public class MapActivityFragment extends Fragment {
         OverlayItem overlayitem2 = new OverlayItem("Title :- " + m.getTitle(), "Description :- " + m.getDescription(), "Url :- " + encodedUrl, myPoint1);
 
         itemizedoverlayForRestaurant.addOverlay(overlayitem2);
+        // add here I am here ;
 
         mMapView.getOverlays().add(itemizedoverlayForRestaurant);
     }

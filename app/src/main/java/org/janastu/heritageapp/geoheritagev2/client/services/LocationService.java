@@ -5,12 +5,14 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class LocationService {
+    private static final String TAG = "LocationService" ;
     private final LocationListener mGpsLocationListener;
     private final LocationListener mNetworkLocationListener;
     private LocationResultListener mLocationResultListener;
@@ -60,7 +62,7 @@ public class LocationService {
                     public void onLocationChanged(Location location) {
                         stop();
                         // callback
-                        mLocationResultListener.onLocationResultAvailable(location);
+                      mLocationResultListener.onLocationResultAvailable(location);
                     }
 
                     @Override
@@ -90,7 +92,10 @@ try{
 
         try {
             mNetworkEnabled = mLocationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-        } catch (Exception ex) {
+        } catch (Exception ex)
+        {
+
+            Log.d(TAG,"LocationService");
         }
 
         // if none are availabe, there is no way to get the location
